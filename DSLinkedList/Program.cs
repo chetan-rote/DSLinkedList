@@ -20,16 +20,19 @@ namespace DSLinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure Linked List.");
-            ///UC1 Creating simple Linkedlist.
+            ///UC1 Create Linked List
             LinkedList linkedList = new LinkedList();
-            ///UC2 Adding elements to the linked list.
+            ///Inserting elements to Linked list.
             linkedList.Add(56);
-            ///UC3 Appends element.
-            linkedList.Append(30);
-            linkedList.Append(70);
+            linkedList.Add(70);
             Console.WriteLine("Values in Linked List:-");
-            ///Displaying the elements present in Linked list.
             linkedList.Display();
+            Console.WriteLine("******");
+            ///Inserting element at given Position.
+            linkedList.InsertAtGivenPosition(2, 30);
+            Console.WriteLine("30 inserted Between 56 & 70");
+            linkedList.Display();
+
         }
     }
 }
