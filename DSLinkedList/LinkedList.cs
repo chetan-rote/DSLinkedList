@@ -100,5 +100,23 @@ namespace DSLinkedList
                 temp.next = node;
             }
         }
+        /// <summary>
+        /// UC5
+        /// Pops the first element from Linkedlist.
+        /// </summary>
+        /// <returns></returns>
+        internal Node Pop()
+        {
+            Node node = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty.");
+            }
+            else
+            {
+                head = head.next;
+            }
+            return node;
+        }
     }
 }
