@@ -1,5 +1,5 @@
 ﻿/******************************************************************************
- *  Purpose: Determines whether or not n is prime.
+ *  Purpose: Perform different operations on the Data structure Linked List.
  *
  *
  *  @author  Chetan Rote
