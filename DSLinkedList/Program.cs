@@ -24,13 +24,12 @@ namespace DSLinkedList
             LinkedList linkedList = new LinkedList();
             ///Inserting elements to Linked list.
             linkedList.Add(56);
+            linkedList.Add(30);
             linkedList.Add(70);
             Console.WriteLine("Values in Linked List:-");
             linkedList.Display();
-            Console.WriteLine("******");
-            ///Inserting element at given Position.
-            linkedList.InsertAtGivenPosition(2, 30);
-            Console.WriteLine("30 inserted Between 56 & 70");
+            Console.WriteLine("*******************");
+            Console.WriteLine("Popped first element " + linkedList.Pop().data + ".\n");
             linkedList.Display();
 
         }
