@@ -7,6 +7,7 @@
  *  @since   06-11-2020
  ******************************************************************************/
 using System;
+using System.Collections.Generic;
 
 namespace DSLinkedList
 {
@@ -19,6 +20,13 @@ namespace DSLinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure Linked List.");
+            ///UC1 Creating simple Linkedlist.
+            LinkedList linkedList = new LinkedList();
+            linkedList.Add(56);
+            linkedList.Add(30);
+            linkedList.Add(70);
+            Console.WriteLine("Values in Linked List:-");
+            linkedList.Display();
         }
     }
 }
