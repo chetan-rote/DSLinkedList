@@ -7,7 +7,7 @@
  *  @since   06-11-2020
  ******************************************************************************/
 using System;
-using System.Collections.Generic;
+using System.Drawing;
 
 namespace DSLinkedList
 {
@@ -19,19 +19,13 @@ namespace DSLinkedList
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Data Structure Linked List.");
-            ///UC1 Create Linked List
-            LinkedList linkedList = new LinkedList();
-            ///Inserting elements to Linked list.
-            linkedList.Add(56);
-            linkedList.Add(30);
-            linkedList.Add(70);
-            linkedList.InsertNodeAfterParticularNode(40, 30);
-            linkedList.Display();
-            linkedList.Size();
-            linkedList.DeleteMiddleNode(40);
-            linkedList.Display();
-            linkedList.Size();
+            Console.WriteLine("Welcome to Data Structure Linked List.");            
+            SortedLinkedList sortedLinkedList = new SortedLinkedList();
+            sortedLinkedList.AddElement(56);
+            sortedLinkedList.AddElement(30);
+            sortedLinkedList.AddElement(40);
+            sortedLinkedList.AddElement(70);
+            sortedLinkedList.Display();
         }
     }
 }
