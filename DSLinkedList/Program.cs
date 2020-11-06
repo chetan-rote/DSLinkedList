@@ -24,8 +24,9 @@ namespace DSLinkedList
             LinkedList linkedList = new LinkedList();
             ///UC2 Adding elements to the linked list.
             linkedList.Add(56);
-            linkedList.Add(30);
-            linkedList.Add(70);
+            ///UC3 Appends element.
+            linkedList.Append(30);
+            linkedList.Append(70);
             Console.WriteLine("Values in Linked List:-");
             ///Displaying the elements present in Linked list.
             linkedList.Display();
