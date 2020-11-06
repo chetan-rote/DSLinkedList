@@ -8,6 +8,7 @@ namespace DSLinkedList
     {
         internal Node head;
         /// <summary>
+        /// UC2
         /// Adds the specified data.
         /// </summary>
         /// <param name="data">The data.</param>
@@ -39,7 +40,7 @@ namespace DSLinkedList
             {
                 Console.WriteLine("linkedlist is  empty");
                 return;
-            }            
+            }
             while (Temp != null)
             {
                 Console.WriteLine(Temp.data + " ");
@@ -47,6 +48,7 @@ namespace DSLinkedList
             }
         }
         /// <summary>
+        /// UC3
         /// Appends the specified element.
         /// </summary>
         /// <param name="data">The element.</param>
@@ -67,6 +69,36 @@ namespace DSLinkedList
                 node1.next = node;
             }
             Console.WriteLine("{0} appended into linked list", node.data);
+        }
+        /// <summary>
+        /// UC4
+        /// Inserts the specified position.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <param name="data">The data.</param>
+        internal void InsertAtGivenPosition(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
         }
     }
 }
