@@ -118,5 +118,21 @@ namespace LinkedListTestCases
             ///Assert
             Assert.AreEqual(3, size);
         }
+        /// <summary>
+        /// Givens the numbers when added should be in ascending order.
+        /// </summary>
+        [TestMethod]
+        public void GivenNumbers_WhenAdded_ShouldBeInAscendingOrder()
+        {
+            ///Arrange
+            SortedLinkedList list = new SortedLinkedList();
+            ///Act
+            list.AddElement(56);
+            list.AddElement(30);
+            list.AddElement(40);
+            list.AddElement(70);
+            ///Assert
+            Assert.AreEqual(30, list.head.data);
+        }
     }
 }
