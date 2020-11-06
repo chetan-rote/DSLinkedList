@@ -27,20 +27,10 @@ namespace DSLinkedList
             linkedList.Add(30);
             linkedList.Add(70);
             Console.WriteLine("Values in Linked List:-");
+            linkedList.Display();            
+            Console.WriteLine("Values in linked list after inserting after particular node.");
+            linkedList.InsertNodeAfterParticularNode(40 ,30);
             linkedList.Display();
-            Console.WriteLine("\n");
-            Console.WriteLine("Enter the element to be searched");
-            int data = Convert.ToInt32(Console.ReadLine());
-
-            int position = linkedList.Search(data);
-            if (position == 0)
-            {
-                Console.WriteLine("No such element found");
-            }
-            else
-            {
-                Console.WriteLine("Element found at position " + position);
-            }
         }
     }
 }
