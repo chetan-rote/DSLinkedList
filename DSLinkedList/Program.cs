@@ -22,10 +22,12 @@ namespace DSLinkedList
             Console.WriteLine("Welcome to Data Structure Linked List.");
             ///UC1 Creating simple Linkedlist.
             LinkedList linkedList = new LinkedList();
+            ///UC2 Adding elements to the linked list.
             linkedList.Add(56);
             linkedList.Add(30);
             linkedList.Add(70);
             Console.WriteLine("Values in Linked List:-");
+            ///Displaying the elements present in Linked list.
             linkedList.Display();
         }
     }
