@@ -29,9 +29,8 @@ namespace DSLinkedList
             Console.WriteLine("Values in Linked List:-");
             linkedList.Display();
             Console.WriteLine("*******************");
-            Console.WriteLine("Popped first element " + linkedList.Pop().data + ".\n");
+            Console.WriteLine("Popped last element " + linkedList.PopLast().data);
             linkedList.Display();
-
         }
     }
 }
