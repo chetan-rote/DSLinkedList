@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DSLinkedList
 {
-    class Node
+    public class Node
     {
         ///Variables.
         public int data;

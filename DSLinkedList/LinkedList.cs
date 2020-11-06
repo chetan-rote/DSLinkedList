@@ -4,15 +4,15 @@ using System.Text;
 
 namespace DSLinkedList
 {
-    class LinkedList
+    public class LinkedList
     {
-        internal Node head;
+        public Node head;
         /// <summary>
         /// UC2
         /// Adds the specified data.
         /// </summary>
         /// <param name="data">The data.</param>
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -52,7 +52,7 @@ namespace DSLinkedList
         /// Appends the specified element.
         /// </summary>
         /// <param name="data">The element.</param>
-        internal void Append(int data)
+        public void Append(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -76,7 +76,7 @@ namespace DSLinkedList
         /// </summary>
         /// <param name="position">The position.</param>
         /// <param name="data">The data.</param>
-        internal void InsertAtGivenPosition(int position, int data)
+        public void InsertAtGivenPosition(int position, int data)
         {
             Node node = new Node(data);
             if (position < 1)
@@ -105,7 +105,7 @@ namespace DSLinkedList
         /// Pops the first element from Linkedlist.
         /// </summary>
         /// <returns></returns>
-        internal Node Pop()
+        public Node Pop()
         {
             Node node = head;
             if (head == null)
@@ -142,5 +142,31 @@ namespace DSLinkedList
                 return removedNode;
             }
         }
+        /// <summary>
+        /// UC7
+        /// Searches for the element in linked list.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        public int Search(int data)
+        {
+            int count = 1;
+            Node temp = head;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return count; ;
+                }
+                temp = temp.next;
+                count++;
+            }
+            return 0;
+        }
     }
 }
+
