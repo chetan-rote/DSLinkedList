@@ -26,11 +26,12 @@ namespace DSLinkedList
             linkedList.Add(56);
             linkedList.Add(30);
             linkedList.Add(70);
-            Console.WriteLine("Values in Linked List:-");
-            linkedList.Display();            
-            Console.WriteLine("Values in linked list after inserting after particular node.");
-            linkedList.InsertNodeAfterParticularNode(40 ,30);
+            linkedList.InsertNodeAfterParticularNode(40, 30);
             linkedList.Display();
+            linkedList.Size();
+            linkedList.DeleteMiddleNode(40);
+            linkedList.Display();
+            linkedList.Size();
         }
     }
 }

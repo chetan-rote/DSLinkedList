@@ -190,6 +190,48 @@ namespace DSLinkedList
             node.next = temp.next;
             temp.next = node;
         }
+        /// <summary>
+        /// UC9
+        /// Deletes the middle node.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public void DeleteMiddleNode(int data)
+        {
+            int position = Search(data);
+            if (position == 0)
+            {
+                Console.WriteLine("No such element found");
+                return;
+            }
+            Node temp = head;
+            for (int i = 1; i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+
+        }
+        /// <summary>
+        /// UC9
+        /// Gives count of elements in the linked list.
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            int count = 0;
+            Node temp = head;
+            if (temp == null)
+            {
+                return 0;
+            }
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine($"Linked List Size is {count}");
+            return count;
+        }
     }
 }
 
