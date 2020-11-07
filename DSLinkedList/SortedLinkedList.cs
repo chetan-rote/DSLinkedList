@@ -15,6 +15,7 @@ namespace DSLinkedList
         public void AddElement(int data)
         {
             Node node = new Node(data);
+            ///Cecks if head is null.
             if (head == null)
             {
                 this.head = node;
@@ -22,6 +23,7 @@ namespace DSLinkedList
             else
             {
                 Node temp = head;
+                ///if head element is greater than data will add new element.
                 if (head.data > data)
                 {
                     node.next = head;
@@ -31,9 +33,9 @@ namespace DSLinkedList
                 {
                     while (temp.next != null)
                     {
+                        ///If temp is lesser than data then it will exchange element.
                         if (temp.next.data < data)
-                            temp = temp.next;
-                        else
+                            temp = temp.next;                        
                         {
                             node.next = temp.next;
                             temp.next = node;
